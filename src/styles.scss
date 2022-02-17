@@ -21,3 +21,50 @@ h1 {
     font-size: 10em;
     text-align: center;
 }
+
+#drumpad {
+    display: grid;
+    width: 50vw;
+    height: 70vh;
+    grid-gap: 10px;
+    grid-template-areas:
+    "Q W E"
+    "A S D"
+    "Z X C";
+}
+
+#Q {
+    grid-area: Q;
+}
+
+#W {
+    grid-area: W;
+}
+
+#E {
+    grid-area: E;
+}
+
+#A {
+    grid-area: A;
+}
+
+#S {
+    grid-area: S;
+}
+
+#D {
+    grid-area: D;
+}
+
+#Z {
+    grid-area: Z;
+}
+
+#X {
+    grid-area: X;
+}
+
+#C {
+    grid-area: C;
+}
