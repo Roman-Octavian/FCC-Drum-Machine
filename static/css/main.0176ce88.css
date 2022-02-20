@@ -1,2 +1,0 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);:root{font-size:62.5%}*{box-sizing:border-box;margin:0;padding:0}html{overflow-x:hidden;scroll-behavior:smooth}h1{font-family:Montserrat,Arial;font-size:10em;text-align:center}#drumpad{grid-gap:10px;display:grid;grid-template-areas:"Q W E" "A S D" "Z X C";height:70vh;width:50vw}#Q{grid-area:Q}#W{grid-area:W}#E{grid-area:E}#A{grid-area:A}#S{grid-area:S}#D{grid-area:D}#Z{grid-area:Z}#X{grid-area:X}#C{grid-area:C}
-/*# sourceMappingURL=main.0176ce88.css.map*/
