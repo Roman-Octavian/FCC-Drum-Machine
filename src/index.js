@@ -14,6 +14,10 @@ import a5 from './assets/a-5.mp3';
 class DrumMachine extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            text: '',
+            volume: 1
+        };
         this.handleKeyPress = this.handleKeyPress.bind(this);
         this.keyPressToButton = this.keyPressToButton.bind(this);
         this.playAudio = this.playAudio.bind(this);
@@ -83,27 +87,37 @@ class DrumMachine extends React.Component {
         }
     }
 
-    playAudio(audio) {
-        const audios = [a4, b4, c4, d4, e4, f4, g4, g42, a5];
-        new Audio(audios[audio]).play();
+    playAudio(id, text) {
+        document.getElementById(id).volume = this.state.volume;
+        document.getElementById(id).play();
+        this.setState({
+            text: text,
+        });
     }
+
 
     render() {
         return (
             <div id="drum-machine">
-                <div id="display">
-
+                <div id="title">
+                    <h1>Drum Machine</h1>
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value={this.state.volume} id="volume" />
                 </div>
                 <div id="drumpad">
-                    <button className="drum-pad" id="Q" onClick={() => this.playAudio(0)}>Q</button>
-                    <button className="drum-pad" id="W" onClick={() => this.playAudio(1)}>W</button>
-                    <button className="drum-pad" id="E" onClick={() => this.playAudio(2)}>E</button>
-                    <button className="drum-pad" id="A" onClick={() => this.playAudio(3)}>A</button>
-                    <button className="drum-pad" id="S" onClick={() => this.playAudio(4)}>S</button>
-                    <button className="drum-pad" id="D" onClick={() => this.playAudio(5)}>D</button>
-                    <button className="drum-pad" id="Z" onClick={() => this.playAudio(6)}>Z</button>
-                    <button className="drum-pad" id="X" onClick={() => this.playAudio(7)}>X</button>
-                    <button className="drum-pad" id="C" onClick={() => this.playAudio(8)}>C</button>
+                <div id="display">
+                    <h2>{this.state.text}</h2>
+                </div>
+                    <button className="drum-pad" id="a4" onClick={() => this.playAudio("Q", "TILE: A4")}><audio src={a4} className="clip" id="Q" />Q</button>
+                    <button className="drum-pad" id="b4" onClick={() => this.playAudio("W", "TILE: B4")}><audio src={b4} className="clip" id="W" />W</button>
+                    <button className="drum-pad" id="c4" onClick={() => this.playAudio("E", "TILE: C4")}><audio src={c4} className="clip" id="E" />E</button>
+                    <button className="drum-pad" id="d4" onClick={() => this.playAudio("A", "TILE: D4")}><audio src={d4} className="clip" id="A" />A</button>
+                    <button className="drum-pad" id="e4" onClick={() => this.playAudio("S", "TILE: E4")}><audio src={e4} className="clip" id="S" />S</button>
+                    <button className="drum-pad" id="f4" onClick={() => this.playAudio("D", "TILE: F4")}><audio src={f4} className="clip" id="D" />D</button>
+                    <button className="drum-pad" id="g4" onClick={() => this.playAudio("Z", "TILE: G4")}><audio src={g4} className="clip" id="Z" />Z</button>
+                    <button className="drum-pad" id="g42" onClick={() => this.playAudio("X", "TILE: G42")}><audio src={g42} className="clip" id="X" />X</button>
+                    <button className="drum-pad" id="a5" onClick={() => this.playAudio("C", "TILE: A5c")}><audio src={a5} className="clip" id="C" />C</button>
                 </div>
             </div>
         );
