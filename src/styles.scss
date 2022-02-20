@@ -26,7 +26,7 @@ html {
 
 h1 {
     font-family: "Montserrat", Arial;
-    font-size: 5em;
+    font-size: 7rem;
     text-align: center;
     margin-bottom: 10vh;
     color: #EBE0DE;
@@ -34,14 +34,14 @@ h1 {
 
 #drumpad {
     display: grid;
-    grid-gap: 3em;
-    padding: 2vh 4vw 4vh 4vw;
+    grid-gap: 1em;
+    padding: 3em;
     border-radius: 20px;
-    border: solid 2px #EBE0DE;
+    border: solid 1em #EBE0DE;
     margin: auto;
     background-color: #FFFFFF;
-    grid-template-rows: 2vh 10vh 10vh 10vh;
-    grid-template-columns: 8vw 8vw 8vw;
+    grid-template-rows: 2vh 10rem 10rem 10rem;
+    grid-template-columns: 16rem 16rem 16rem;
     grid-template-areas:
     "F F V"
     "Q W E"
@@ -50,13 +50,23 @@ h1 {
 }
 
 #display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 2vw;
     grid-area: F;
-    text-align: center;
+    background-color: #EBE0DE;
+    font-size: 1rem;
+    border: solid 1px #979797;
+    border-style: ridge;
 }
 
 #volume {
     grid-area: V;
-    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
 }
 
 #Q {
@@ -98,5 +108,55 @@ h1 {
 .drum-pad {
     background-color: #EBE0DE;
     font-size: 5em;
-    border-radius: 4px;
+    border-radius: 8px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 7vh;
+    }
+
+    #drumpad {
+        grid-gap: 1.5em;
+        padding: 3em;
+        border: solid 1em #EBE0DE;
+        grid-template-rows: 2vh 7rem 7rem 7rem;
+        grid-template-columns: 7rem 7rem 7rem;
+    }
+
+    .drum-pad {
+        font-size: 4em;
+    }
+
+    #volume {
+        width: 9rem;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    h1 {
+        font-size: 0;
+        margin-bottom: 0;
+    }
+
+    #drumpad {
+        grid-gap: 1.5em;
+        padding: 3em;
+        border: solid 1em #EBE0DE;
+        grid-template-rows: 2vh 7rem 7rem 7rem;
+        grid-template-columns: 7rem 7rem 7rem;
+    }
+
+    #display {
+        padding: 2vh 0;
+    }
+
+    .drum-pad {
+        font-size: 3.5em;
+    }
+
+    #volume {
+        width: 7rem;
+    }
 }

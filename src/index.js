@@ -16,7 +16,7 @@ class DrumMachine extends React.Component {
         super(props);
         this.state = {
             text: '',
-            volume: 1
+            volume: 0.5
         };
         this.handleKeyPress = this.handleKeyPress.bind(this);
         this.keyPressToButton = this.keyPressToButton.bind(this);
@@ -125,7 +125,7 @@ class DrumMachine extends React.Component {
                     <button className="drum-pad" id="f4" onClick={() => this.playAudio("D", "TILE: F4")}><audio src={f4} className="clip" id="D" />D</button>
                     <button className="drum-pad" id="g4" onClick={() => this.playAudio("Z", "TILE: G4")}><audio src={g4} className="clip" id="Z" />Z</button>
                     <button className="drum-pad" id="g42" onClick={() => this.playAudio("X", "TILE: G42")}><audio src={g42} className="clip" id="X" />X</button>
-                    <button className="drum-pad" id="a5" onClick={() => this.playAudio("C", "TILE: A5c")}><audio src={a5} className="clip" id="C" />C</button>
+                    <button className="drum-pad" id="a5" onClick={() => this.playAudio("C", "TILE: A5")}><audio src={a5} className="clip" id="C" />C</button>
                 </div>
             </div>
         );
