@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/FCC-Drum-Machine/static/css/main.26a9b206.css",
-    "main.js": "/FCC-Drum-Machine/static/js/main.716b6a68.js",
+    "main.css": "/FCC-Drum-Machine/static/css/main.eccbe7f6.css",
+    "main.js": "/FCC-Drum-Machine/static/js/main.516c39cc.js",
     "static/media/a-5.mp3": "/FCC-Drum-Machine/static/media/a-5.763278b4bc240cc93e28.mp3",
     "static/media/b4.mp3": "/FCC-Drum-Machine/static/media/b4.0402a205026be1b7ff10.mp3",
     "static/media/a4.mp3": "/FCC-Drum-Machine/static/media/a4.3f7962d527b8ec804016.mp3",
@@ -12,11 +12,11 @@
     "static/media/g-4.mp3": "/FCC-Drum-Machine/static/media/g-4.4c9d22f5fee87ecbdcee.mp3",
     "static/media/g4.mp3": "/FCC-Drum-Machine/static/media/g4.cd503cd3ec578ca85a0d.mp3",
     "index.html": "/FCC-Drum-Machine/index.html",
-    "main.26a9b206.css.map": "/FCC-Drum-Machine/static/css/main.26a9b206.css.map",
-    "main.716b6a68.js.map": "/FCC-Drum-Machine/static/js/main.716b6a68.js.map"
+    "main.eccbe7f6.css.map": "/FCC-Drum-Machine/static/css/main.eccbe7f6.css.map",
+    "main.516c39cc.js.map": "/FCC-Drum-Machine/static/js/main.516c39cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.26a9b206.css",
-    "static/js/main.716b6a68.js"
+    "static/css/main.eccbe7f6.css",
+    "static/js/main.516c39cc.js"
   ]
 }
