@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/FCC-Drum-Machine/static/css/main.eccbe7f6.css",
+    "main.css": "/FCC-Drum-Machine/static/css/main.bcde2974.css",
     "main.js": "/FCC-Drum-Machine/static/js/main.516c39cc.js",
     "static/media/a-5.mp3": "/FCC-Drum-Machine/static/media/a-5.763278b4bc240cc93e28.mp3",
     "static/media/b4.mp3": "/FCC-Drum-Machine/static/media/b4.0402a205026be1b7ff10.mp3",
@@ -12,11 +12,11 @@
     "static/media/g-4.mp3": "/FCC-Drum-Machine/static/media/g-4.4c9d22f5fee87ecbdcee.mp3",
     "static/media/g4.mp3": "/FCC-Drum-Machine/static/media/g4.cd503cd3ec578ca85a0d.mp3",
     "index.html": "/FCC-Drum-Machine/index.html",
-    "main.eccbe7f6.css.map": "/FCC-Drum-Machine/static/css/main.eccbe7f6.css.map",
+    "main.bcde2974.css.map": "/FCC-Drum-Machine/static/css/main.bcde2974.css.map",
     "main.516c39cc.js.map": "/FCC-Drum-Machine/static/js/main.516c39cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.eccbe7f6.css",
+    "static/css/main.bcde2974.css",
     "static/js/main.516c39cc.js"
   ]
 }
