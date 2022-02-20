@@ -93,7 +93,7 @@ class DrumMachine extends React.Component {
         document.getElementById(id).currentTime = 0;
         document.getElementById(id).play();
         this.setState({
-            text: text, 
+            text: text,
         });
     }
 
@@ -114,7 +114,7 @@ class DrumMachine extends React.Component {
                 <div id="display">
                     <h2>{this.state.text}</h2>
                 </div>
-                <div class="slidecontainer">
+                <div id="volume">
                     <input type="range" min="0" max="1" step="0.01" value={this.state.volume} onChange={this.onChange} id="volume" />
                 </div>
                     <button className="drum-pad" id="a4" onClick={() => this.playAudio("Q", "TILE: A4")}><audio src={a4} className="clip" id="Q" />Q</button>
