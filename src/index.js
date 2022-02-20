@@ -21,6 +21,7 @@ class DrumMachine extends React.Component {
         this.handleKeyPress = this.handleKeyPress.bind(this);
         this.keyPressToButton = this.keyPressToButton.bind(this);
         this.playAudio = this.playAudio.bind(this);
+        this.onChange = this.onChange.bind(this);
     }
 
     componentDidMount() {
@@ -89,11 +90,18 @@ class DrumMachine extends React.Component {
 
     playAudio(id, text) {
         document.getElementById(id).volume = this.state.volume;
+        document.getElementById(id).currentTime = 0;
         document.getElementById(id).play();
         this.setState({
-            text: text,
+            text: text, 
         });
     }
+
+    onChange = (event) => {
+       this.setState({
+        volume: event.target.value
+       });
+    };
 
 
     render() {
@@ -102,12 +110,12 @@ class DrumMachine extends React.Component {
                 <div id="title">
                     <h1>Drum Machine</h1>
                 </div>
-                <div class="slidecontainer">
-                    <input type="range" min="1" max="100" value={this.state.volume} id="volume" />
-                </div>
                 <div id="drumpad">
                 <div id="display">
                     <h2>{this.state.text}</h2>
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="1" step="0.01" value={this.state.volume} onChange={this.onChange} id="volume" />
                 </div>
                     <button className="drum-pad" id="a4" onClick={() => this.playAudio("Q", "TILE: A4")}><audio src={a4} className="clip" id="Q" />Q</button>
                     <button className="drum-pad" id="b4" onClick={() => this.playAudio("W", "TILE: B4")}><audio src={b4} className="clip" id="W" />W</button>
